@@ -15,6 +15,7 @@ def home():
 @app.route(f"/{TELEGRAM_TOKEN}", methods=["POST"])
 def webhook():
     data = request.get_json()
+    print("Incoming:", data)    
     if "message" not in data or "text" not in data["message"]:
         return "ok"
 
