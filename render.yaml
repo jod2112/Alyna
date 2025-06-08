@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ai-gf-bot
+    env: python
+    buildCommand: ""  
+    startCommand: "python main.py"
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false
+      - key: OPENAI_KEY
+        sync: false
